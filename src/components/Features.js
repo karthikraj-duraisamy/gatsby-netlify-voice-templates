@@ -5,21 +5,33 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 const FeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline">
     {gridItems.map(item => (
-      <div key={item.text} className="column is-6">
-        <section className="section">
-          <div className="has-text-centered">
+       <div key={item.text} className="column is-6">
+        <section className="section" style={{padding: '3rem 0.5rem',}}>
+          <div className="has-text-centered box" style={{padding:'0px', borderRadius: '0px'}}>
             <div
               style={{
-                width: '240px',
-                display: 'inline-block',
+                width: '500px',
+                display: 'inline',
               }}
             >
               <PreviewCompatibleImage imageInfo={item} />
+              <h1>{item.templateTitle}</h1>
+              <p>{item.templateDescription}</p>
+              <div
+              style={{
+                backgroundColor:'#cedadb',
+                padding: '8px',
+                'overflow-wrap': 'break-word'
+              }}
+            >
+            To get this template, by using 'ask cli'
+            <br/><br/>
+            <p>{item.templateUrl}</p>
+            </div>
             </div>
           </div>
-          <p>{item.text}</p>
         </section>
-      </div>
+       </div>
     ))}
   </div>
 )
@@ -28,7 +40,9 @@ FeatureGrid.propTypes = {
   gridItems: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      text: PropTypes.string,
+      templateTitle: PropTypes.string,
+      templateDescription: PropTypes.string,
+      templateUrl: PropTypes.string,
     })
   ),
 }

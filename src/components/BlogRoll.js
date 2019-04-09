@@ -15,7 +15,7 @@ class BlogRoll extends React.Component {
               <article className="tile is-child box notification">
                 <p>
                   <Link
-                    className="title has-text-primary is-size-4"
+                    className="title is-size-4"
                     to={post.fields.slug}
                   >
                     {post.frontmatter.title}
@@ -30,7 +30,7 @@ class BlogRoll extends React.Component {
                   <br />
                   <br />
                   <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
+                    Open →
                   </Link>
                 </p>
               </article>

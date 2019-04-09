@@ -10,21 +10,6 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 
 
 
-### Access Locally
-```
-$ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
-$ cd [REPO_NAME]
-$ yarn
-$ npm run start
-```
-To test the CMS locally, you'll need run a production build of the site:
-```
-$ npm run build
-$ npm run serve
-```
-
-
-
 # Support
 
 To help the developers building more templates in Voice applications.
